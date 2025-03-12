@@ -26,16 +26,17 @@ $ fxn auth login <ACCESS KEY>
 ```
 
 ## Compiling your Function
-The [predictor.py](predictor.py) module defines a prediction function `greeting`:
+The [predictor.py](predictor.py) module defines a prediction function `greeting`. Update the predictor `tag` 
+with your Function username:
 ```py
 from fxn import compile
 
 @compile(
-    tag="@yusuf/greeting",
+    tag="@your-username/greeting", # replace `your-username`
     description="Say a friendly greeting."
 )
 def greeting (name: str) -> str:
-    return f"Hey there {name}! We're glad you're using Function and we hope you like it 😄"
+    return f"Hey there {name}! We're glad you're using Function and we hope you like it."
 ```
 
 Compile it using the `fxn compile` CLI command:
